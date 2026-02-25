@@ -98,7 +98,7 @@ export default function ExhibitSection({ title, description, detailText, imageSr
 
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <motion.div style={{ opacity: text1Opacity }} className="absolute max-w-3xl px-8 text-center">
-            <h2 className="text-5xl md:text-7xl font-serif text-white mb-6 drop-shadow-lg">
+            <h2 className="text-5xl md:text-7xl text-white mb-6 drop-shadow-lg">
               {title}
             </h2>
             <p className="text-xl text-gray-300 drop-shadow-md">

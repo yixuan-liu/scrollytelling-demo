@@ -4,7 +4,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 // Data structure adapted from your snippet
 const relatedData = {
@@ -55,7 +54,7 @@ export default function RelatedStories() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <h2 className="text-center text-2xl md:text-3xl font-serif text-white border-b border-neutral-800 pb-6">
+          <h2 className="text-center text-2xl md:text-3xl text-white border-b border-neutral-800 pb-6">
             More from the {relatedData.partner}
           </h2>
         </motion.div>
@@ -85,7 +84,7 @@ export default function RelatedStories() {
                     </span>
                   </div>
                 </div>
-                <h3 className="text-xl font-serif text-white group-hover:text-amber-500 transition-colors line-clamp-2 mb-2">
+                <h3 className="text-xl text-white group-hover:text-amber-500 transition-colors line-clamp-2 mb-2">
                   {story.title}
                 </h3>
                 {story.subtitle && (
@@ -106,7 +105,7 @@ export default function RelatedStories() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-center text-2xl md:text-3xl font-serif text-white border-b border-neutral-800 pb-6">
+          <h2 className="text-center text-2xl md:text-3xl text-white border-b border-neutral-800 pb-6">
             Explore more
           </h2>
         </motion.div>
@@ -135,7 +134,7 @@ export default function RelatedStories() {
                 <h3 className="text-sm font-medium text-amber-500 uppercase tracking-widest mb-3">
                   Related theme
                 </h3>
-                <h2 className="text-3xl md:text-5xl font-serif text-white mb-4 leading-tight drop-shadow-lg max-w-3xl">
+                <h2 className="text-3xl md:text-5xl text-white mb-4 leading-tight drop-shadow-lg max-w-3xl">
                   {relatedData.theme.title}
                 </h2>
                 {relatedData.theme.subtitle && (

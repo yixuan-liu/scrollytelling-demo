@@ -37,8 +37,8 @@ export default function PanExhibitSection({ title, description, imageSrc, index 
 
   // 2. TEXT FADING
   const mainTextOpacity = useTransform(scrollYProgress, [0, 0.1, 0.25], [0, 1, 0]);
-  const detail1Opacity = useTransform(scrollYProgress, [0.25, 0.35, 0.45], [0, 1, 0]); 
-  const detail2Opacity = useTransform(scrollYProgress, [0.5, 0.6, 0.7], [0, 1, 0]);   
+  const detail1Opacity = useTransform(scrollYProgress, [0.25, 0.35, 0.45], [0, 1, 0]);
+  const detail2Opacity = useTransform(scrollYProgress, [0.5, 0.6, 0.7], [0, 1, 0]);
 
   // 3. ARROW OPACITY
   const arrowOpacity = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
@@ -46,9 +46,9 @@ export default function PanExhibitSection({ title, description, imageSrc, index 
   // 4. CLICK HANDLER
   const scrollToNextSection = () => {
     if (containerRef.current && containerRef.current.nextElementSibling) {
-      containerRef.current.nextElementSibling.scrollIntoView({ 
+      containerRef.current.nextElementSibling.scrollIntoView({
         behavior: 'smooth',
-        block: 'start' 
+        block: 'start'
       });
     }
   };
@@ -56,8 +56,8 @@ export default function PanExhibitSection({ title, description, imageSrc, index 
   const marginClass = isFirst ? 'mt-0' : '-mt-[100vh]';
 
   return (
-    <section 
-      ref={containerRef} 
+    <section
+      ref={containerRef}
       className={`relative h-[400vh] bg-neutral-950 ${marginClass}`}
       style={{ zIndex: index * 10 }}
     >
@@ -66,13 +66,13 @@ export default function PanExhibitSection({ title, description, imageSrc, index 
       )}
 
       <div className="sticky top-0 h-screen w-full overflow-hidden shadow-2xl">
-        
-        <motion.div 
-          style={{ 
+
+        <motion.div
+          style={{
             scale: imageScale,
             x: imageX,
             y: imageY
-          }} 
+          }}
           className="absolute inset-0 w-full h-full"
         >
           <Image
@@ -88,7 +88,7 @@ export default function PanExhibitSection({ title, description, imageSrc, index 
 
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <motion.div style={{ opacity: mainTextOpacity }} className="absolute max-w-3xl px-8 text-center">
-            <h2 className="text-5xl md:text-7xl font-serif text-white mb-6 drop-shadow-lg">
+            <h2 className="text-5xl md:text-7xl text-white mb-6 drop-shadow-lg">
               {title}
             </h2>
             <p className="text-xl text-gray-300 drop-shadow-md">

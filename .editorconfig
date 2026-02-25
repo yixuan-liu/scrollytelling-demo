@@ -1,0 +1,20 @@
+# EditorConfig helps maintain consistent coding styles for multiple developers working on the same project across various editors and IDEs.
+# https://editorconfig.org/
+
+# This is the top-most EditorConfig file for this project
+root = true
+
+# Apply these settings to all files
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# The crucial setting: 2 spaces instead of 4
+indent_style = space
+indent_size = 2
+
+# Override specific settings for Markdown (allows trailing spaces for line breaks)
+[*.md]
+trim_trailing_whitespace = false

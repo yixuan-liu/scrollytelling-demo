@@ -1,5 +1,7 @@
-import ExhibitSection from './ExhibitSection'; // Adjust path as needed
+import ExhibitSection from './ExhibitSection';
 import PanExhibitSection from './PanExhibitSection';
+
+import ProgressBar from './ProgressBar';
 
 // Your gallery data
 const galleryData = [
@@ -15,14 +17,14 @@ const galleryData = [
     title: 'The 1902 Frock Coat',
     description: 'A refinement in naval tailoring and formal presentation.',
     // detailText: 'By 1902, regulations shifted again. The cut of the trousers and the associated headwear evolved to match the updated silhouette of the coat.',
-    imageSrc: 'https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=2000', 
+    imageSrc: 'https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=2000',
   },
   {
     id: '1930s-era',
     title: '1930s Era Evolution',
     description: 'Moving towards the modern silhouette prior to the Second World War.',
     // detailText: 'The materials and tailoring techniques of the 1930s reflect a modernization of the service, transitioning away from the heavier Victorian influences.',
-    imageSrc: 'https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=2000', 
+    imageSrc: 'https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?q=80&w=2000',
   }
 ];
 
@@ -33,6 +35,9 @@ export default function VirtualMuseumTour() {
       {/* <div className="h-screen flex items-center justify-center text-white">
         <h1 className="text-4xl tracking-widest uppercase">Scroll to Begin Tour</h1>
       </div> */}
+
+      {/* Progress Bar to visually let user know the scrolling progress */}
+      <ProgressBar />
 
      {/* The Map Loop */}
      {/* {galleryData.map((exhibit, index) => (
@@ -47,7 +52,7 @@ export default function VirtualMuseumTour() {
 
 
       {galleryData.map((exhibit, index) => (
-        <ExhibitSection 
+        <ExhibitSection
           key={exhibit.id}
           index={index}
           title={exhibit.title}

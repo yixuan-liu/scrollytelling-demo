@@ -97,11 +97,19 @@ export default function ExhibitSection({ title, description, detailText, imageSr
         </motion.div>
 
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <motion.div style={{ opacity: text1Opacity }} className="absolute max-w-3xl px-8 text-center">
-            <h2 className="text-5xl md:text-7xl text-white mb-6 drop-shadow-lg">
+          {/* MAIN HEADING & SUBTITLE */}
+          <motion.div
+            style={{ opacity: text1Opacity }}
+            className={
+              isFirst
+                ? "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl px-8 text-center"
+                : "absolute bottom-32 left-8 md:left-16 max-w-2xl text-left z-30"
+            }
+          >
+            <h2 className={`text-white mb-6 drop-shadow-lg ${isFirst ? 'text-5xl md:text-7xl' : 'text-4xl md:text-3xl'}`}>
               {title}
             </h2>
-            <p className="text-xl text-gray-300 drop-shadow-md">
+            <p className={`text-lg text-gray-300 drop-shadow-md ${!isFirst ? 'bg-black/50 p-5 rounded-xl backdrop-blur-md border-l-4 border-neutral-500 inline-block' : ''}`}>
               {description}
             </p>
           </motion.div>

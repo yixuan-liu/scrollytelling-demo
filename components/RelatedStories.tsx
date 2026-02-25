@@ -1,46 +1,10 @@
 'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
+import { relatedData } from '@/lib/data';
 
-// Data structure adapted from your snippet
-const relatedData = {
-  theme: {
-    title: 'The Evolution of Naval Rank Insignia',
-    subtitle: 'Trace the history of sleeve lace, epaulets, and collar devices from the Civil War to the modern era.',
-    thumbnail: 'https://images.unsplash.com/photo-1604263368964-458cd7644b37?q=80&w=4592', // Replace with your asset
-    url: '/explore/insignia',
-  },
-  partner: 'National Naval Aviation Museum',
-  stories: [
-    {
-      id: 'ww1-aviation',
-      title: 'Early Naval Aviation Flight Gear',
-      subtitle: 'Leather, canvas, and the transition to purpose-built aviator uniforms.',
-      thumbnail: 'https://images.unsplash.com/photo-1623792165505-b42b0c54372b?q=80&w=3173',
-      type: '1910s Collection',
-      url: '/stories/ww1-aviation',
-    },
-    {
-      id: 'enlisted-ranks',
-      title: 'The Iconic Crackerjack',
-      subtitle: 'How enlisted deck uniforms became a symbol of the service.',
-      thumbnail: 'https://images.unsplash.com/photo-1580135657424-8ecfbe64c13e?q=80&w=1610',
-      type: 'Enlisted History',
-      url: '/stories/crackerjack',
-    },
-    {
-      id: 'dress-whites',
-      title: 'Tropical & Summer Whites',
-      subtitle: 'Adapting formal wear for the Pacific Fleet and warm climates.',
-      thumbnail: 'https://images.unsplash.com/photo-1579762714760-1cc4cfe140e3?q=80&w=1977&auto=format&fit=crop',
-      type: 'Pacific Fleet',
-      url: '/stories/summer-whites',
-    },
-  ],
-};
 
 export default function RelatedStories() {
   return (
@@ -78,11 +42,11 @@ export default function RelatedStories() {
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1.5 bg-black/60 backdrop-blur-md border border-neutral-700/50 text-xs font-medium text-amber-500 uppercase tracking-wider rounded-full shadow-lg">
-                      {story.type}
-                    </span>
-                  </div>
+                <div className="absolute top-4 left-4 opacity-0 -translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 z-10">
+                  <span className="px-3 py-1.5 bg-black/60 backdrop-blur-md border border-neutral-700/50 text-xs font-medium text-amber-500 uppercase tracking-wider rounded-full shadow-lg">
+                    {story.type}
+                  </span>
+                </div>
                 </div>
                 <h3 className="text-xl text-white group-hover:text-amber-500 transition-colors line-clamp-2 mb-2">
                   {story.title}

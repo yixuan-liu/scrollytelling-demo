@@ -33,13 +33,20 @@ export interface RelatedContent {
 // ==========================================
 // Mock data interface for the carousel component
 // ==========================================
-export interface ExhibitCarouselItem {
+export interface CollectionCarouselItem {
   id: string | number;
   title: string;
   era: string;
   description: string;
   imageUrl?: string;
   color?: string;
+}
+
+export interface CarouselItem {
+  id: string;
+  title: string;
+  description: string;
+  imageSrc: string;
 }
 
 // ==========================================
@@ -106,7 +113,7 @@ export const relatedData: RelatedContent = {
   ],
 };
 
-export const exhibitCarouselData: ExhibitCarouselItem[] = [
+export const collectionCarouselData: CollectionCarouselItem[] = [
   {
     id: "navy-frock-1899",
     title: "US Navy Frock Coat",
@@ -134,5 +141,26 @@ export const exhibitCarouselData: ExhibitCarouselItem[] = [
     era: "1930s",
     description: "Featuring heavy gold oak leaf embroidery denoting senior flag officer rank.",
     color: "bg-stone-900",
+  }
+];
+
+export const accoutrementsData: CarouselItem[] = [
+  {
+    id: 'bicorn-hat',
+    title: 'Officer Bicorn Hat',
+    description: 'The highly formal "fore-and-aft" hat, worn parallel to the shoulders, adorned with gold bullion tassels.',
+    imageSrc: 'https://images.unsplash.com/photo-1544831616-1f7f2b186b4f?q=80&w=800'
+  },
+  {
+    id: 'epaulets',
+    title: 'Fringed Epaulets',
+    description: 'Heavy gold bullion epaulets denoting rank, securely anchored to the shoulders of the frock coat during full dress.',
+    imageSrc: 'https://images.unsplash.com/photo-1582561424760-0eaafcb0d678?q=80&w=800'
+  },
+  {
+    id: 'sword-belt',
+    title: 'Full Dress Sword Belt',
+    description: 'Woven with gold lace on a dark leather backing, featuring the traditional eagle and anchor belt plate.',
+    imageSrc: 'https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=800'
   }
 ];

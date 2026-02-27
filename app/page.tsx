@@ -4,31 +4,14 @@ import Footer from '@/components/Footer';
 import ProgressBar from '@/components/ProgressBar';
 import RelatedStories from '@/components/RelatedStories';
 import { galleryData } from '@/lib/data';
-import ExhibitCarousel from '@/components/ExhibitCarousel';
+import CollectionCarousel from '@/components/CollectionCarousel';
 
 
 export default function VirtualMuseumTour() {
   return (
     <main className="bg-neutral-950">
-      {/* Optional Intro Banner */}
-      {/* <div className="h-screen flex items-center justify-center text-white">
-        <h1 className="text-4xl tracking-widest uppercase">Scroll to Begin Tour</h1>
-      </div> */}
-
       {/* Progress Bar to visually let user know the scrolling progress */}
       <ProgressBar />
-
-     {/* The Map Loop */}
-     {/* {galleryData.map((exhibit, index) => (
-        <PanExhibitSection
-          key={exhibit.id}
-          index={index}
-          title={exhibit.title}
-          description={exhibit.description}
-          imageSrc={exhibit.imageSrc}
-        />
-      ))} */}
-
 
       {galleryData.map((exhibit, index) => (
         <ExhibitSection
@@ -42,7 +25,7 @@ export default function VirtualMuseumTour() {
         />
       ))}
 
-      <ExhibitCarousel />
+      <CollectionCarousel />
 
       {/* Optional Outro Banner */}
       {/* <div className="h-[50vh] flex items-center justify-center text-white">
@@ -54,6 +37,22 @@ export default function VirtualMuseumTour() {
 
       {/* Footer */}
       <Footer />
+
+      {/* Optional Intro Banner */}
+      {/* <div className="h-screen flex items-center justify-center text-white">
+        <h1 className="text-4xl tracking-widest uppercase">Scroll to Begin Tour</h1>
+      </div> */}
+
+     {/* The Map Loop */}
+     {/* {galleryData.map((exhibit, index) => (
+        <PanExhibitSection
+          key={exhibit.id}
+          index={index}
+          title={exhibit.title}
+          description={exhibit.description}
+          imageSrc={exhibit.imageSrc}
+        />
+      ))} */}
     </main>
   );
 }

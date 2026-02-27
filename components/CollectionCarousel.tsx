@@ -3,17 +3,17 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-import { ExhibitCarouselItem, exhibitCarouselData } from "@/lib/data";
+import { CollectionCarouselItem, collectionCarouselData } from "@/lib/data";
 
-interface ExhibitCarouselProps {
-  items?: ExhibitCarouselItem[];
-  onEnter3DViewer?: (item: ExhibitCarouselItem) => void;
+interface CollectionCarouselProps {
+  items?: CollectionCarouselItem[];
+  onEnter3DViewer?: (item: CollectionCarouselItem) => void;
 }
 
-export default function ExhibitCarousel({
-  items = exhibitCarouselData,
+export default function CollectionCarousel({
+  items = collectionCarouselData,
   onEnter3DViewer
-}: ExhibitCarouselProps) {
+}: CollectionCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(1);
 
   // Left and right navigation handlers

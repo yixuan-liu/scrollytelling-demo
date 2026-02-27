@@ -3,9 +3,9 @@ import PanExhibitSection from '@/components/PanExhibitSection';
 import Footer from '@/components/Footer';
 import ProgressBar from '@/components/ProgressBar';
 import RelatedStories from '@/components/RelatedStories';
-import { galleryData } from '@/lib/data';
+import { galleryData, accoutrementsData } from '@/lib/data';
 import CollectionCarousel from '@/components/CollectionCarousel';
-
+import ExhibitCarousel from '@/components/ExhibitCarousel';
 
 export default function VirtualMuseumTour() {
   return (
@@ -25,7 +25,13 @@ export default function VirtualMuseumTour() {
         />
       ))}
 
-      <CollectionCarousel />
+      <ExhibitCarousel
+        title="Accoutrements & Details"
+        subtitle="Explore the prescribed accessories worn with the 1899 Frock Coat."
+        items={accoutrementsData}
+      />
+
+      {/* <CollectionCarousel /> */}
 
       {/* Optional Outro Banner */}
       {/* <div className="h-[50vh] flex items-center justify-center text-white">

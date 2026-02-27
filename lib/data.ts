@@ -31,7 +31,7 @@ export interface RelatedContent {
 }
 
 // ==========================================
-// Mock data interface for the carousel component
+// Mock data interface for the collection carousel component
 // ==========================================
 export interface CollectionCarouselItem {
   id: string | number;
@@ -42,6 +42,9 @@ export interface CollectionCarouselItem {
   color?: string;
 }
 
+// ==========================================
+// Mock data interface for the exhibit carousel component
+// ==========================================
 export interface CarouselItem {
   id: string;
   title: string;
@@ -149,18 +152,36 @@ export const accoutrementsData: CarouselItem[] = [
     id: 'bicorn-hat',
     title: 'Officer Bicorn Hat',
     description: 'The highly formal "fore-and-aft" hat, worn parallel to the shoulders, adorned with gold bullion tassels.',
-    imageSrc: 'https://images.unsplash.com/photo-1544831616-1f7f2b186b4f?q=80&w=800'
+    imageSrc: 'https://images.unsplash.com/photo-1593691254840-2eb74d195eea?q=80&w=2360'
   },
   {
     id: 'epaulets',
     title: 'Fringed Epaulets',
     description: 'Heavy gold bullion epaulets denoting rank, securely anchored to the shoulders of the frock coat during full dress.',
-    imageSrc: 'https://images.unsplash.com/photo-1582561424760-0eaafcb0d678?q=80&w=800'
+    imageSrc: 'https://images.unsplash.com/photo-1750586403232-ddc60c0e34aa?q=80&w=4032'
   },
   {
     id: 'sword-belt',
     title: 'Full Dress Sword Belt',
     description: 'Woven with gold lace on a dark leather backing, featuring the traditional eagle and anchor belt plate.',
-    imageSrc: 'https://images.unsplash.com/photo-1599839619722-39751411ea63?q=80&w=800'
+    imageSrc: 'https://images.unsplash.com/photo-1682623764763-eafb3d04ed22?q=80&w=1587'
+  },
+  {
+    id: 'bicorn-hat-2',
+    title: 'Officer Bicorn Hat',
+    description: 'The highly formal "fore-and-aft" hat, worn parallel to the shoulders, adorned with gold bullion tassels.',
+    imageSrc: 'https://images.unsplash.com/photo-1602095009371-4ee6aef1f03a?q=80&w=1587'
+  },
+  {
+    id: 'epaulets-2',
+    title: 'Fringed Epaulets',
+    description: 'Heavy gold bullion epaulets denoting rank, securely anchored to the shoulders of the frock coat during full dress.',
+    imageSrc: 'https://images.unsplash.com/photo-1710012266702-5d07af722344?q=80&w=1615'
+  },
+  {
+    id: 'sword-belt-2',
+    title: 'Full Dress Sword Belt',
+    description: 'Woven with gold lace on a dark leather backing, featuring the traditional eagle and anchor belt plate.',
+    imageSrc: 'https://images.unsplash.com/photo-1568127703071-9cebb201b6cd?q=80&w=534'
   }
 ];

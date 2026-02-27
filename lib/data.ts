@@ -31,6 +31,18 @@ export interface RelatedContent {
 }
 
 // ==========================================
+// Mock data interface for the carousel component
+// ==========================================
+export interface ExhibitCarouselItem {
+  id: string | number;
+  title: string;
+  era: string;
+  description: string;
+  imageUrl?: string;
+  color?: string;
+}
+
+// ==========================================
 // EXPORTED DATA ARRAYS & OBJECTS
 // ==========================================
 
@@ -93,3 +105,34 @@ export const relatedData: RelatedContent = {
     },
   ],
 };
+
+export const exhibitCarouselData: ExhibitCarouselItem[] = [
+  {
+    id: "navy-frock-1899",
+    title: "US Navy Frock Coat",
+    era: "1899-1900",
+    description: "Regulation line officer's frock coat featuring distinctive sleeve lace and brass buttons, representing the turn-of-the-century naval dress.",
+    color: "bg-slate-900",
+  },
+  {
+    id: "officer-dress-1930",
+    title: "Officer Dress Uniform",
+    era: "1930s",
+    description: "Interwar period naval officer's uniform, showcasing the tailored fit and evolution of insignia prior to WWII.",
+    color: "bg-zinc-900",
+  },
+  {
+    id: "service-dress-blue",
+    title: "Service Dress Blue",
+    era: "WWII Era",
+    description: "The standard service dress worn by commissioned officers, designed for both shore and sea duty.",
+    color: "bg-neutral-900",
+  },
+  {
+    id: "admiral-visor",
+    title: "Admiral's Visor Cap",
+    era: "1930s",
+    description: "Featuring heavy gold oak leaf embroidery denoting senior flag officer rank.",
+    color: "bg-stone-900",
+  }
+];

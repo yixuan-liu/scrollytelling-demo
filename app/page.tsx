@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import ProgressBar from '@/components/ProgressBar';
 import RelatedStories from '@/components/RelatedStories';
 import { galleryData } from '@/lib/data';
+import ExhibitCarousel from '@/components/ExhibitCarousel';
 
 
 export default function VirtualMuseumTour() {
@@ -40,6 +41,8 @@ export default function VirtualMuseumTour() {
           isLast={index === galleryData.length - 1}
         />
       ))}
+
+      <ExhibitCarousel />
 
       {/* Optional Outro Banner */}
       {/* <div className="h-[50vh] flex items-center justify-center text-white">

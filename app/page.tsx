@@ -3,7 +3,7 @@ import PanExhibitSection from '@/components/PanExhibitSection';
 import Footer from '@/components/Footer';
 import ProgressBar from '@/components/ProgressBar';
 import RelatedStories from '@/components/RelatedStories';
-import { galleryData, accoutrementsData } from '@/lib/data';
+import { galleryData, accoutrementsData } from '@/lib/model/data';
 import CollectionCarousel from '@/components/CollectionCarousel';
 import ExhibitCarousel from '@/components/ExhibitCarousel';
 

@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { relatedData } from '@/lib/data';
+import { relatedData } from '@/lib/model/data';
 
 
 export default function RelatedStories() {

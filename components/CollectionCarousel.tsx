@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-import { CollectionCarouselItem, collectionCarouselData } from "@/lib/data";
+import { CollectionCarouselItem, collectionCarouselData } from "@/lib/model/data";
 
 interface CollectionCarouselProps {
   items?: CollectionCarouselItem[];

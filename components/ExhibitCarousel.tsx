@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
-import { CarouselItem } from '@/lib/data';
+import { CarouselItem } from '@/lib/model/data';
 
 interface ExhibitCarouselProps {
   title: string;
